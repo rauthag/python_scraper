@@ -33,7 +33,7 @@ Ak by ste chceli skontrolovať, alebo mazať dáta na mongoDB zašlem aj prihlas
 
 
 ### Použil som
-*[Scrapy](https://scrapy.org/)
-*[Flask](https://flask.palletsprojects.com/en/1.1.x/)
-*[Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/)
-*[MongoDB](https://www.mongodb.com/)
+* [Scrapy](https://scrapy.org/)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/)
+* [MongoDB](https://www.mongodb.com/)
