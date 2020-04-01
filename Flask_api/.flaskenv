@@ -1,0 +1,2 @@
+FLASK_APP=pymongoscraper
+FLASK_ENV=development

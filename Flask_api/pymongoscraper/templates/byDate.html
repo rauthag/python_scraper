@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-color: #99CCFF;
+    font-family: Sans-serif;
+}
+table {
+  font-family: Sans-serif;
+  font-size: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 5px solid #006666;
+  text-align: left;
+  padding: 8px;
+}
+
+h2{
+    color: darkblue;
+}
+
+tr:nth-child(even) {
+  background-color: #E9F8FF;
+}
+</style>
+</head>
+<body>
+
+<h2>sector.sk Scraper</h2>
+
+<table>
+ <tr>
+    <th>Titulok</th>
+    <th>Autor</th>
+    <th>Dátum pridania</th>
+     <th>Kategória</th>
+     <th>Počet Komentárov</th>
+     <th>Popis</th>
+     <th>Tagy</th>
+  </tr>{% for title, author, url, published, category, comment,parag, parag2, tag in article_set%}
+  <tr>
+    <td>
+      <a href="{{url}}">{{title}} </a>
+    </td>
+      <td>
+          {{author}}
+      </td>
+      <td>
+          {{published}}
+      </td>
+      <td>
+          {{category}}
+      </td>
+      <td>
+          {{comment}}
+      </td>
+      <td>
+          {{parag}} <br>
+          {{parag2}}
+      </td>
+      <td>
+          {{tag}}
+      </td>
+
+
+  </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
+
+<!--    {% for title in titles%}-->
+<!--      <th>{{titles}}</th>-->
+<!--      {% endfor %}-->
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body{
+    background-color: #99CCFF;
+    font-family: Sans-serif;
+}
+table {
+  font-family: Sans-serif;
+  font-size: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 5px solid #006666;
+  text-align: left;
+  padding: 8px;
+}
+
+h1{
+    color: darkblue;
+    display: inline;
+}
+
+h3, p {
+  display: inline;
+}
+
+h4 {
+  display: inline;
+}
+
+
+tr:nth-child(even) {
+  background-color: #E9F8FF;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<form method="POST">
+    <h1>Sector.sk Scraper</h1><br>
+        <h3>
+            &nbsp;Zoradiť podľa:
+            <input type="radio" id="datum" name="options" value="datum">
+            <h4>dátum</h4>
+            <input type="radio" id="koment" name="options" value="koment">
+            <h4>počet komentárov</h4><br>
+
+            <h3>&nbsp;Počet záznamov:
+            <input type="number" name="number" style="font-size:15px; width:13%">
+            </h3>
+        </h3><br>
+<input type="submit" value="Zoradiť" style="font-size:15px; width:22%">
+</form>
+
+
+<table>
+ <tr>
+    <th>Titulok</th>
+    <th>Autor</th>
+    <th>Dátum pridania</th>
+     <th>Kategória</th>
+     <th>Počet Komentárov</th>
+     <th>Popis</th>
+     <th>Tagy</th>
+  </tr>{% for title, author, url, published, category, comment,parag, parag2, tag in article_set%}
+  <tr>
+    <td>
+      <a href="{{url}}">{{title}} </a>
+    </td>
+      <td>
+          {{author}}
+      </td>
+      <td>
+          {{published}}
+      </td>
+      <td>
+          {{category}}
+      </td>
+      <td>
+          {{comment}}
+      </td>
+      <td>
+          {{parag}} <br>
+          {{parag2}}
+      </td>
+      <td>
+          {{tag}}
+      </td>
+
+
+  </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
+
+<!--    {% for title in titles%}-->
+<!--      <th>{{titles}}</th>-->
+<!--      {% endfor %}-->
+
+
