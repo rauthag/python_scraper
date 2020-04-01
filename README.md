@@ -29,7 +29,7 @@ Vo virtual enviroment (venv) v záložke Flask_api spustite príkaz
 flask run
 ```
 Na local hoste (127.0.0.1:5000) sa spustí jednoduchá stránka s tabuľkou dát uložených na mongoDB.
-Ak by ste chceli skontrolovať, alebo mazať dáta na mongoDB zašlem aj prihlasovacie údaje.
+Ak by ste chceli skontrolovať, alebo mazať dáta na mongoDB zašlem aj aj invite na email, alebo api key.
 
 
 ### Použil som
